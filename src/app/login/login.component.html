@@ -6,13 +6,15 @@
         <h2 class="text-center text-primary">Login Form</h2>
         <form action="" class=" m-5 p-5">
             <div class="m-3">
-                <input type="text" class="form-control" [placeholder]="accplaceholder" (change)="acnochange($event)">
+                <!-- <input type="text" class="form-control" [placeholder]="accplaceholder" (change)="acnochange($event)"> -->
+                <input type="text" class="form-control" [placeholder]="accplaceholder" #acno>
             </div>
             <div class="m-3">
-                <input type="password" class="form-control" placeholder="Password" (change)="pswdchange($event)">
+                <!-- <input type="password" class="form-control" placeholder="Password" (change)="pswdchange($event)"> -->
+                <input type="password" class="form-control" placeholder="Password" #pswd>
             </div>
             <div class="m-3">
-                <input (click)="login()" type="submit" name="" id="loginbtn" class="btn btn-primary" value="Login">
+                <input (click)="login(acno,pswd)" type="submit" name="" id="loginbtn" class="btn btn-primary" value="Login">
             </div>
         </form>
         <div>

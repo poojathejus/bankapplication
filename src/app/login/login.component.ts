@@ -43,9 +43,31 @@ pswdchange(event:any)
  
   
 }
-login(){
-  var acno = this.acno
-  var pswd = this.pswd
+// login(){
+//   var acno = this.acno
+//   var pswd = this.pswd
+
+//   let userdetails = this.database
+//   if(acno in userdetails)
+//   {
+//     if(pswd == userdetails[acno]['password'])
+//     {
+//       alert('Login successfully')
+//     }
+//     else
+//     {
+//       alert('Incorrect Password')
+//     }
+//   }
+//   else
+//   {
+//     alert('User does not exist');
+//   }
+// }
+
+login(a:any,p:any){
+  var acno = a.value
+  var pswd = p.value
 
   let userdetails = this.database
   if(acno in userdetails)
