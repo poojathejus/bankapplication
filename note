@@ -5,6 +5,7 @@ Basic Commands :-
 1. creating a project - ng new project-name
 2. to run angular project  -  ng serve
 3. to generate component - ng g c component-name 
+4. to create service - ng g s Service-name
 
 Basic Concepts :-
 
@@ -30,5 +31,34 @@ Basic Concepts :-
 
             3.1.2.3   Template Referencing variable - syntax: #variable-name
 
+    3.2 Two way binding - same time data sharing in both direction    
 
+        3.2.1  Using ngModel - Import FormsModule -   Import in AppModule
+
+                ngModel - syntax : [(ngModel)] = "variable-name"    
+                (set name attribute if it used inside form tag)
+
+4. Component Path Set Up
+
+    router outlet selector
+
+5.  Dependency Injection - Inside Constructor of a class
+
+6.  Angular Service 
+
+7. ngSubmit   - (an event)
+
+8.  Angular Forms
+    8.1 Template driven form
+    8.2 model driven form -  eg:ReactiveForms - impoet ReactiveFormsModule
+        (form group,form array,form control)
+
+9. Directives - to do manipulation in dom
+
+    9.1 component directive
+
+    9.2 structural directive - prefix *
+    
+        9.2.1   *ngIf
+        
 

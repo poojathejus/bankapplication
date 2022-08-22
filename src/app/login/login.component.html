@@ -4,21 +4,35 @@
     <div class="col lg-4" style="margin-top:200px ;">
        <div class="border container">
         <h2 class="text-center text-primary">Login Form</h2>
-        <form action="" class=" m-5 p-5">
+        <form [formGroup]="loginForm" action="" class=" m-5 p-5" (ngSubmit)="login()">
             <div class="m-3">
                 <!-- <input type="text" class="form-control" [placeholder]="accplaceholder" (change)="acnochange($event)"> -->
-                <input type="text" class="form-control" [placeholder]="accplaceholder" #acno>
+                <!-- <input type="text" class="form-control" [placeholder]="accplaceholder" #acno> -->
+                <!-- <input type="text" class="form-control" [placeholder]="accplaceholder" [(ngModel)]="acno" name="acno"> -->
+                <input type="text" class="form-control" [placeholder]="accplaceholder" formControlName="acno" name="acno">
+                <div *ngIf="this.loginForm.get('acno')?.touched&&this.loginForm.get('acno')?.errors" class="m-3" style="color: red;" >
+                    Invalid Account Number
+                </div>
+
             </div>
             <div class="m-3">
                 <!-- <input type="password" class="form-control" placeholder="Password" (change)="pswdchange($event)"> -->
-                <input type="password" class="form-control" placeholder="Password" #pswd>
+                <!-- <input type="password" class="form-control" placeholder="Password" #pswd> -->
+                <!-- <input type="password" class="form-control" placeholder="Password" [(ngModel)]="pswd" name="pswd"> -->
+                <input type="password" class="form-control" placeholder="Password"  formControlName="pswd" name="pswd">
+
+                <div *ngIf="this.loginForm.get('pswd')?.touched&&this.loginForm.get('pswd')?.errors" class="m-3" style="color: red;" >
+                    Invalid Password
+                </div>
             </div>
             <div class="m-3">
-                <input (click)="login(acno,pswd)" type="submit" name="" id="loginbtn" class="btn btn-primary" value="Login">
+                <!-- <input (click)="login(acno,pswd)" type="submit" name="" id="loginbtn" class="btn btn-primary" value="Login"> -->
+                <input  type="submit" name="" id="loginbtn" class="btn btn-primary" value="Login">
+
             </div>
         </form>
         <div>
-            <label for="">Not a User? Click here <a href="">Register</a></label>
+            <label for="">Not a User? Click here <a routerLink="register">Register</a></label>
            </div>
        </div> 
       
