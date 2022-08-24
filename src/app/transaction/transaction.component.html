@@ -1,0 +1,22 @@
+<h1 class="m-5 text-center">Transaction History</h1>
+<table style="padding: 40px; margin-left: 800px; margin-right: 900px;font: 25px;" class="border border-primary ">
+<thead>
+    <tr>
+        <th>Type</th>&nbsp;
+        <th>Amount</th>
+    </tr>
+</thead>
+<tbody>
+    
+<tr *ngFor="let t of transactions">
+    <th>{{t.type}}</th>&nbsp;
+    <th>{{t.amount}}</th>
+</tr>
+
+    
+</tbody>
+</table>
+<br>
+<br>
+<a href="./dashboard">HOME</a>
+

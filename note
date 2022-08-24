@@ -60,5 +60,6 @@ Basic Concepts :-
     9.2 structural directive - prefix *
     
         9.2.1   *ngIf
+        9.2.2   *ngFor
         
 
