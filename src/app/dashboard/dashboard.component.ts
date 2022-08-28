@@ -25,6 +25,10 @@ export class DashboardComponent implements OnInit {
 
 //current user
 user:any;
+
+//to hold the account to delete
+acno:any
+
   constructor(private formBuilder:FormBuilder,private dataService:DataService,private router:Router) { }
 
   ngOnInit(): void {
@@ -78,5 +82,19 @@ user:any;
     localStorage.removeItem('currentacno')
     localStorage.removeItem('currentuser')
     this.router.navigateByUrl('')
+  }
+
+  deleteacc()
+  {
+    this.acno = JSON.parse(localStorage.getItem('currentacno') || '')
+  }
+
+  cancel()
+  {
+    this.acno =''
+  }
+  delete(event:any)
+  {
+    alert('from parent dashboard '+ event)
   }
 }

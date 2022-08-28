@@ -61,5 +61,12 @@ Basic Concepts :-
     
         9.2.1   *ngIf
         9.2.2   *ngFor
-        
+
+     9.3 attribute directives   - based on some condition we can apply style
+            eg: ngClass 
+
+10. Parent child communication
+
+    10.1 parent-child -@Input()
+    10.2 child-parent -@Output()    
 
